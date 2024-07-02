@@ -1,0 +1,263 @@
+body {
+    height: 97vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border: 5px solid rgb(197, 125, 255);
+    box-shadow: 0 0 20px 20px rgb(197, 125, 255);
+    animation: border-glow 1s infinite alternate;
+    cursor: none;
+
+}
+  
+#container {
+    position: fixed;
+    touch-action: none;
+    z-index: -1;
+    max-height: 900px;
+    max-width: 100vw;
+}
+
+.button-wrapper {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.button {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 50px 1px rgb(197, 125, 255);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.button-wrapper:hover .button {
+    opacity: 1;
+    transform: scale(1.1);
+}
+.top-left {
+    top: 100px;
+    left: 100px;
+}
+
+.top-right {
+    top: 100px;
+    right: 200px;
+}
+
+.bottom-left {
+    bottom: 200px;
+    left: 100px;
+}
+
+.bottom-right {
+    bottom: 200px;
+    right: 200px;
+}
+.button-wrapper.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.button-wrapper.center .button {
+    width: 1000px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+@keyframes border-glow {
+    from {
+        box-shadow: 0 0 10px rgb(197, 125, 255);
+    }
+    to {
+        box-shadow: 0 0 20px rgb(197, 125, 255);
+    }
+}
+.title {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    color: black;
+    text-align: center;
+    font-size: 12px;
+    margin: 0;
+    z-index: 0;
+}
+
+.button-wrapper.show-title .title {
+    opacity: 1;
+    z-index: 1000;
+}
+#abaco{
+    float: left;
+    font-size: medium;
+    width: 400px;
+    text-align: left;
+    margin: 55px 0px 50px 55px;
+    line-height: 1.5;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    font-weight: lighter;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: none;
+    touch-action: none;
+    pointer-events: none;
+}
+#pascalina{
+    float: right;
+    font-size:14.5px;
+    width: 400px;
+    text-align: left;
+    margin: 35px 35px 50px 0px;
+    line-height: 1.5;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    font-weight: lighter;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    left: 530px;
+    display: none;
+    touch-action: none;
+    pointer-events: none;
+}
+#maquina-analitica{
+    float: left;
+    font-size: 14.5px;
+    width: 400px;
+    text-align: left;
+    margin: 45px 0px 50px 45px;
+    line-height: 1.5;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    font-weight: lighter;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 530px;
+    display: none;
+    touch-action: none;
+    pointer-events: none;
+}
+#ada{
+    float: right;
+    font-size:14.5px;
+    width: 400px;
+    text-align: left;
+    margin: 35px 35px 50px 0px;
+    line-height: 1.5;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    font-weight: lighter;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 15px;
+    display: none;
+    touch-action: none;
+    pointer-events: none;
+}
+#imgAda{
+    max-width: 300px;
+    max-height: 300px;
+    position: absolute;
+    top: 320px;
+    left: 580px;
+    touch-action: none;
+    pointer-events: none;
+    display: none;
+}
+#cartões-perfurados{
+    float: left;
+    font-size: 17px;
+    width: 400px;
+    text-align: left;
+    margin:40px 0px 50px 45px;
+    line-height: 1.5;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    font-weight: lighter;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 530px;
+    display: none;
+    touch-action: none;
+    pointer-events: none; 
+}
+#maquina-de-turing{
+    float: right;
+    font-size:18px;
+    width: 400px;
+    text-align: left;
+    margin:40px 35px 50px 0px;
+    line-height: 1.5;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    font-weight: lighter;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 15px;
+    display: none;
+    touch-action: none;
+    pointer-events: none; 
+}
+#projeto-manhattan{
+    float: left;
+    font-size: 15px;
+    width: 400px;
+    text-align: left;
+    margin:25px 0px 50px 25px;
+    line-height: 1.5;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    font-weight: lighter;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 530px;
+    display: none;
+    touch-action: none;
+    pointer-events: none; 
+}
+#ENIAC{
+    float: right;
+    font-size:19px;
+    width: 400px;
+    text-align: left;
+    margin:100px 35px 50px 0px;
+    line-height: 1.5;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    font-weight: lighter;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    right: 15px;
+    display: none;
+    touch-action: none;
+    pointer-events: none; 
+}
+#imgBomb{
+    transform: scale(1.15);
+    position: absolute;
+    top: 360px;
+    left: 100px;
+    touch-action: none;
+    pointer-events: none;
+    display: none; 
+}
